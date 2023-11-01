@@ -8,12 +8,22 @@ namespace Chapter2
         {
             Console.WriteLine("Hello World!");
 
-            var timestaping=new InAccurateTimeStamping();
+            // ExecuteTimestaping();
+            RunBenchmarkExecution();
+        }
+
+        static void ExecuteTimestaping()
+        {
+            var timestaping = new InAccurateTimeStamping();
             timestaping.GetTimeDiffForBenchmark();
             timestaping.Sort_BadBenchmark(10000);
             timestaping.Sort_BetterBenckmark(10000);
+        }
 
-            Console.ReadKey();
+        static void RunBenchmarkExecution()
+        {
+            var benchmarkExecution = new BenchmarkExecution();
+            benchmarkExecution.GetExecutionTime();
         }
     }
 }
